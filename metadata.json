@@ -1,0 +1,6 @@
+{
+  "name": "FractureAI — Bone Fracture Detection",
+  "description": "Intelligent bone fracture screening research prototype and educational healthcare platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FractureAI — Bone Fracture Detection</title>
+    <meta name="description" content="Intelligent bone fracture screening research prototype and educational healthcare platform." />
+    
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="FractureAI — Bone Fracture Detection" />
+    <meta property="og:description" content="Intelligent bone fracture screening research prototype and educational healthcare platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FractureAI" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FractureAI — Bone Fracture Detection" />
+    <meta name="twitter:description" content="Intelligent bone fracture screening research prototype and educational healthcare platform." />
+
+    <!-- Google Fonts: Inter and Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="/src/css/animations.css" />
+    <link rel="stylesheet" href="/src/css/auth.css" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FractureAI",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "Educational AI research platform investigating bone fracture screening using deep convolutional neural networks and transfer learning."
+    }
+    </script>
+  </head>
+  <body>
+
+    <!-- ====================================================================
+         Top Navigation Bar (Top Bar Contract: 3 zones, 1 row)
+         ==================================================================== -->
+    <header class="site-header" role="banner">
+      <div class="container nav-container">
+        <!-- Zone 1: Single Brand Wordmark -->
+        <a href="#hero" class="brand-wordmark" aria-label="FractureAI Homepage">
+          <div class="brand-icon-box" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Geometric bone / medical AI cross symbol -->
+              <path d="M12 2v20M2 12h20M7 7l10 10M17 7L7 17"></path>
+            </svg>
+          </div>
+          <span>Fracture<span class="brand-accent">AI</span></span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#how-it-works" class="nav-link">How It Works</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#awareness" class="nav-link">Awareness</a>
+          <a href="#find-a-doctor" class="nav-link">Find a Doctor</a>
+        </nav>
+
+        <!-- Zone 3: Primary Actions -->
+        <div id="nav-actions-container" class="nav-actions">
+          <button id="nav-btn-signin" class="btn btn-ghost" data-action="open-signin">Sign In</button>
+          <button id="nav-btn-getstarted" class="btn btn-primary" data-action="open-register">Get Started</button>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+        <a href="#hero" class="mobile-nav-link">Home</a>
+        <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#awareness" class="mobile-nav-link">Awareness</a>
+        <a href="#find-a-doctor" class="mobile-nav-link">Find a Doctor</a>
+        <div style="display: flex; gap: 10px; margin-top: 12px;">
+          <button class="btn btn-secondary btn-sm" style="flex: 1;" data-action="open-signin">Sign In</button>
+          <button class="btn btn-primary btn-sm" style="flex: 1;" data-action="open-register">Get Started</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+
+      <!-- ==================================================================
+           Section B: Hero Section
+           ================================================================== -->
+      <section id="hero" class="hero-section">
+        <div class="container hero-grid">
+          <!-- Left Column -->
+          <div class="hero-left reveal-init">
+            <div class="hero-kicker">
+              <span class="hero-kicker-dot" aria-hidden="true"></span>
+              AI-POWERED BONE HEALTH
+            </div>
+
+            <h1 class="hero-heading">
+              See Beyond the <span class="cyan-gradient-text">X-Ray</span>.
+            </h1>
+
+            <p class="hero-subtext">
+              Explore intelligent bone fracture screening technology designed to help make X-ray analysis more accessible through AI-powered research.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn btn-primary" data-action="open-detection">
+                <span>Start Detection</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="#how-it-works" class="btn btn-secondary">
+                <span>Explore How It Works</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-note">
+              <span class="hero-trust-dot" aria-hidden="true">●</span>
+              <span>AI Research Prototype · Educational Use Only</span>
+            </div>
+          </div>
+
+          <!-- Right Column: Medical Radiograph Visualization -->
+          <div class="hero-right reveal-init delay-200">
+            <div class="xray-viewport-card floating-anim">
+              <div class="xray-header-bar">
+                <div class="xray-indicator">
+                  <span class="status-beacon" aria-hidden="true"></span>
+                  <span>RADIOGRAPH SCANNER // 16-BIT DICOM</span>
+                </div>
+                <div class="xray-meta-tag">ANTEROPOSTERIOR VIEW</div>
+              </div>
+
+              <div class="xray-canvas-wrapper">
+                <!-- Forearm Radiograph Image -->
+                <img
+                  id="hero-xray-img"
+                  src="/images/hero_xray_forearm.jpg"
+                  alt="Clinical forearm X-ray radiograph illustrating radius and ulna skeletal anatomy"
+                  class="xray-image"
+                  loading="eager"
+                  referrerpolicy="no-referrer"
+                />
+
+                <!-- Fallback SVG Canvas if image fails or is loading -->
+                <div id="hero-xray-fallback" class="xray-fallback-visual">
+                  <svg width="220" height="260" viewBox="0 0 220 260" fill="none" stroke="#39D5FF" stroke-width="2" stroke-linecap="round" opacity="0.85">
+                    <!-- Stylized radius and ulna bone silhouette -->
+                    <path d="M70 20 C60 60, 50 140, 65 240 M90 20 C80 70, 75 160, 85 240 M130 20 C140 80, 145 160, 135 240 M150 20 C160 90, 165 170, 155 240" stroke-width="3" stroke="#718BFF" />
+                    <circle cx="75" cy="130" r="14" stroke="#39D5FF" stroke-width="2" stroke-dasharray="4 4" />
+                  </svg>
+                </div>
+
+                <!-- Animated Cyan Scanning Line -->
+                <div class="scan-beam" aria-hidden="true"></div>
+
+                <!-- Fracture Hotspot Reticle Overlay -->
+                <div class="reticle-hotspot" aria-hidden="true">
+                  <div class="reticle-core"></div>
+                  <div class="reticle-annotation">FRACTURE SUSPECT: RADIAL MARGIN</div>
+                </div>
+
+                <!-- Floating Analysis Telemetry Card -->
+                <div class="floating-telemetry-card">
+                  <div class="telemetry-item">
+                    <span class="telemetry-label">Analysis Target</span>
+                    <span class="telemetry-val">Distal Radius</span>
+                  </div>
+                  <div class="telemetry-item">
+                    <span class="telemetry-label">Model Pipeline</span>
+                    <span class="telemetry-val accent">Transfer CNN</span>
+                  </div>
+                  <div class="telemetry-item">
+                    <span class="telemetry-label">Status</span>
+                    <span class="telemetry-val">Research Active</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Section C: Animated Statistics Strip
+           ================================================================== -->
+      <section class="stats-section" aria-label="Key Research Pillars">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-card reveal-init">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="stat-title">AI-Powered Screening</h3>
+              <p class="stat-desc">Multi-layer CNN architecture with transfer learning from deep anatomical feature extractors.</p>
+            </div>
+
+            <div class="stat-card reveal-init delay-100">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+              <h3 class="stat-title">Image-Based Analysis</h3>
+              <p class="stat-desc">Native preprocessing for high-resolution DICOM, standard PNG, and JPEG radiographic formats.</p>
+            </div>
+
+            <div class="stat-card reveal-init delay-200">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </div>
+              <h3 class="stat-title">Explainable AI Research</h3>
+              <p class="stat-desc">Attention-guided Grad-CAM heatmaps highlight cortical disruptions for academic transparency.</p>
+            </div>
+
+            <div class="stat-card reveal-init delay-300">
+              <div class="stat-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3 class="stat-title">Accessible Bone Health</h3>
+              <p class="stat-desc">Evidence-grounded educational triage to help individuals understand skeletal care protocols.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Section D: How It Works Section
+           ================================================================== -->
+      <section id="how-it-works" class="section-wrapper">
+        <div class="container">
+          <div class="section-header reveal-init">
+            <div class="section-kicker">AI WORKFLOW</div>
+            <h2 class="section-title">From X-Ray to Insight.</h2>
+            <p class="section-subtitle">A simple workflow designed around image-based AI research.</p>
+          </div>
+
+          <div class="steps-container">
+            <!-- Step 1 -->
+            <div class="step-card reveal-init">
+              <div class="step-number">01</div>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <h3 class="step-title">Upload an X-Ray</h3>
+              <p class="step-description">
+                The future detection portal accepts clinical X-ray radiographs in standard medical imaging formats (DICOM, PNG, or JPEG). Images undergo secure client-side cropping and contrast normalization.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card reveal-init delay-100">
+              <div class="step-number">02</div>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <circle cx="9" cy="9" r="2"></circle>
+                  <path d="M21 15l-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path>
+                </svg>
+              </div>
+              <h3 class="step-title">AI-Assisted Analysis</h3>
+              <p class="step-description">
+                The radiograph is processed through a separately integrated and academically validated Convolutional Neural Network (CNN) leveraging transfer learning across large musculoskeletal datasets.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card reveal-init delay-200">
+              <div class="step-number">03</div>
+              <div class="step-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <h3 class="step-title">Understand the Result</h3>
+              <p class="step-description">
+                The interface displays model findings alongside spatial Grad-CAM attention regions, accompanied by comprehensive educational material and clear instructions to consult orthopedic clinicians.
+              </p>
+            </div>
+          </div>
+
+          <div class="steps-action-bar reveal-init">
+            <button class="btn btn-primary" data-action="open-detection">
+              <span>Explore Detection</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Section E: Features Section
+           ================================================================== -->
+      <section id="features" class="section-wrapper" style="background: rgba(12, 25, 42, 0.35);">
+        <div class="container">
+          <div class="section-header reveal-init">
+            <div class="section-kicker">ENGINEERING & CAPABILITIES</div>
+            <h2 class="section-title">Technology Designed Around Bone Health.</h2>
+            <p class="section-subtitle">Bridging computer vision research with orthopedic safety and patient education.</p>
+          </div>
+
+          <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card reveal-init">
+              <div class="feature-top">
+                <div class="feature-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  </svg>
+                </div>
+                <span class="feature-status-badge badge-planned">Planned CNN Integration</span>
+              </div>
+              <h3 class="feature-title">AI-Based Image Analysis</h3>
+              <p class="feature-text">Deep neural network screening pipeline trained on thousands of annotated musculoskeletal radiographs for fracture discontinuity detection.</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card reveal-init delay-100">
+              <div class="feature-top">
+                <div class="feature-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <span class="feature-status-badge badge-planned">Planned Visualization</span>
+              </div>
+              <h3 class="feature-title">Explainable AI Visualization</h3>
+              <p class="feature-text">Class activation mapping that pinpoints which bone structures influenced the model decision, demystifying deep learning outputs.</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card reveal-init delay-200">
+              <div class="feature-top">
+                <div class="feature-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <span class="feature-status-badge badge-active">Live Directory</span>
+              </div>
+              <h3 class="feature-title">Orthopedic Care Discovery</h3>
+              <p class="feature-text">Instant lookup tool to locate verified orthopedic trauma specialists, bone fracture clinics, and emergency health networks.</p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="feature-card reveal-init">
+              <div class="feature-top">
+                <div class="feature-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                </div>
+                <span class="feature-status-badge badge-active">Live Full-Stack</span>
+              </div>
+              <h3 class="feature-title">Secure Account Access</h3>
+              <p class="feature-text">Password-protected researcher accounts with six-digit email OTP two-factor verification powered by Node.js and Express.</p>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="feature-card reveal-init delay-100">
+              <div class="feature-top">
+                <div class="feature-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                </div>
+                <span class="feature-status-badge badge-planned">Planned Research Log</span>
+              </div>
+              <h3 class="feature-title">Personalized Analysis History</h3>
+              <p class="feature-text">Structured chronological log of screened radiographs, model confidence ratings, and review timestamps stored securely.</p>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="feature-card reveal-init delay-200">
+              <div class="feature-top">
+                <div class="feature-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                </div>
+                <span class="feature-status-badge badge-active">Active Guide</span>
+              </div>
+              <h3 class="feature-title">Bone Health Awareness</h3>
+              <p class="feature-text">Curated educational protocols explaining fracture injury signs, emergency triage guidelines, and preventive bone nutrition.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Section F: Awareness and Education Section
+           ================================================================== -->
+      <section id="awareness" class="section-wrapper">
+        <div class="container">
+          <div class="section-header reveal-init">
+            <div class="section-kicker">PATIENT EDUCATION</div>
+            <h2 class="section-title">Know More. Protect Your Bone Health.</h2>
+            <p class="section-subtitle">Understanding fracture symptoms and evidence-grounded first-aid protocols.</p>
+          </div>
+
+          <div class="awareness-grid">
+            <!-- Card 1 -->
+            <div class="awareness-card reveal-init">
+              <div class="awareness-tag">Symptom Recognition</div>
+              <h3 class="awareness-title">Recognizing Possible Fracture Signs</h3>
+              <p class="awareness-body">
+                Bone fractures often present with localized sharp pain, rapid swelling, discoloration or bruising, acute tenderness upon gentle touch, or an inability to bear weight or move the affected limb.
+              </p>
+              <div class="awareness-highlight-box">
+                <strong>Important note:</strong> Fracture symptoms can vary significantly in subtlety (such as hairline stress fractures). A fracture cannot be ruled out based on symptoms or physical feeling alone without clinical radiography.
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="awareness-card reveal-init delay-100">
+              <div class="awareness-tag">Emergency Protocol</div>
+              <h3 class="awareness-title">What to Do After an Injury</h3>
+              <p class="awareness-body">
+                If a fracture is suspected, immobilize the limb immediately using a splint or sling and seek prompt medical assessment at an urgent care clinic or emergency facility.
+              </p>
+              <div class="awareness-highlight-box">
+                <strong>Urgent Warning:</strong> A visibly deformed limb, severe bleeding, exposed bone fragment, numbness, or a cold, pale extremity warrants immediate 911 emergency medical intervention. Never manipulate or attempt to realign a suspected fracture yourself.
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="awareness-card reveal-init delay-200">
+              <div class="awareness-tag">Long-Term Care</div>
+              <h3 class="awareness-title">Supporting Bone Health</h3>
+              <p class="awareness-body">
+                Maintaining strong skeletal bone density relies on consistent adequate dietary intake of calcium and vitamin D, regular weight-bearing physical activity, and safe environment practices to prevent falls.
+              </p>
+              <div class="awareness-highlight-box">
+                <strong>Educational Disclaimer:</strong> General bone health recommendations provide population-level wellness guidance and must not replace tailored clinical advice or bone mineral density testing (DEXA) from your doctor.
+              </div>
+            </div>
+          </div>
+
+          <div class="awareness-actions reveal-init">
+            <button id="btn-open-awareness-modal" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Read Bone Health Tips & Clinical Checklist</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Section G: Find a Doctor Section
+           ================================================================== -->
+      <section id="find-a-doctor" class="section-wrapper" style="background: rgba(12, 25, 42, 0.4);">
+        <div class="container">
+          <div class="section-header reveal-init">
+            <div class="section-kicker">HEALTHCARE NETWORK</div>
+            <h2 class="section-title">Connect With Orthopedic Care.</h2>
+            <p class="section-subtitle">Find nearby orthopedic specialists and healthcare facilities when you need professional evaluation.</p>
+          </div>
+
+          <div class="doctor-finder-layout reveal-init">
+            <!-- Left Side: Search Form -->
+            <div class="doctor-search-box">
+              <div>
+                <h3 style="font-size: 20px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px;">
+                  Locate Specialists in Your Area
+                </h3>
+                <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">
+                  Enter your city, neighborhood, or postal code to generate verified links to orthopedic practices, sports medicine clinics, and radiology trauma centers.
+                </p>
+              </div>
+
+              <form id="doctor-search-form" class="doctor-form">
+                <div class="input-with-button-group">
+                  <div class="input-wrapper">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <input
+                      type="text"
+                      id="doctor-location-input"
+                      class="text-input"
+                      placeholder="e.g. San Francisco, CA or 94107"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+
+                <div class="doctor-actions-row">
+                  <button type="submit" class="btn btn-primary btn-sm">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <span>Find Nearby Doctors</span>
+                  </button>
+
+                  <button type="button" id="btn-use-location" class="btn btn-secondary btn-sm">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                    </svg>
+                    <span>Use My Location</span>
+                  </button>
+                </div>
+
+                <div id="doctor-status-feedback" class="doctor-status-feedback" aria-live="polite"></div>
+              </form>
+
+              <!-- Results Card Area -->
+              <div id="doctor-results-preview" style="display: none;"></div>
+            </div>
+
+            <!-- Right Side: Geospatial / Map Illustration Visual -->
+            <div class="doctor-map-visual">
+              <img
+                src="/images/orthopedic_care_map.jpg"
+                alt="Map interface visualization illustrating orthopedic clinics and medical facilities"
+                class="map-image"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+              <div class="map-overlay-card">
+                <span style="display: flex; align-items: center; gap: 6px;">
+                  <span class="status-beacon" aria-hidden="true"></span>
+                  <strong>Orthopedic Trauma Directory</strong>
+                </span>
+                <span style="color: var(--accent-cyan);">Google Maps Search Ready</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           Section H: Final Call to Action Section
+           ================================================================== -->
+      <section class="final-cta-section">
+        <div class="container">
+          <div class="cta-banner reveal-init">
+            <h2 class="cta-title">Your Bone Health Journey Starts Here.</h2>
+            <p class="cta-text">
+              Join researchers, clinicians, and health-conscious individuals exploring intelligent, accessible computer vision solutions for musculoskeletal care.
+            </p>
+            <div class="cta-buttons">
+              <button class="btn btn-primary" data-action="open-register">
+                <span>Get Started</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="#awareness" class="btn btn-secondary">
+                <span>Explore Awareness</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ====================================================================
+         Section I: Footer
+         ==================================================================== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-top">
+          <!-- Brand Column -->
+          <div class="footer-brand-col">
+            <div class="brand-wordmark">
+              <div class="brand-icon-box" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 2v20M2 12h20M7 7l10 10M17 7L7 17"></path>
+                </svg>
+              </div>
+              <span>Fracture<span class="brand-accent">AI</span></span>
+            </div>
+            <p>
+              An academic AI/ML research initiative advancing automated radiograph analysis with transfer learning and deep convolutional neural networks.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <div class="footer-col-title">Navigation</div>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#awareness">Awareness</a></li>
+              <li><a href="#find-a-doctor">Find a Doctor</a></li>
+            </ul>
+          </div>
+
+          <!-- Account -->
+          <div>
+            <div class="footer-col-title">Account</div>
+            <ul class="footer-links">
+              <li><button data-action="open-signin">Sign In</button></li>
+              <li><button data-action="open-register">Create Account</button></li>
+              <li><button data-action="open-detection">Detection Portal</button></li>
+            </ul>
+          </div>
+
+          <!-- Legal & Compliance -->
+          <div>
+            <div class="footer-col-title">Legal & Trust</div>
+            <ul class="footer-links">
+              <li><button data-action="open-privacy">Privacy Policy</button></li>
+              <li><button data-action="open-terms">Terms of Use</button></li>
+              <li><button data-action="open-disclaimer">Medical Disclaimer</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <!-- Required Medical Disclaimer -->
+          <div class="medical-disclaimer-box">
+            <strong>Mandatory Medical Notice:</strong> FractureAI is an educational AI research prototype. Its output is not a medical diagnosis and must not replace evaluation by a qualified healthcare professional.
+          </div>
+
+          <div class="copyright-row">
+            <div>&copy; 2026 FractureAI. All rights reserved. Built for academic research and educational evaluation.</div>
+            <div style="display: flex; gap: 16px;">
+              <span>Inter & Space Grotesk Typography</span>
+              <span>·</span>
+              <span>High Contrast WCAG AA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ====================================================================
+         Modal 1: Authentication Interface (Sign In, Register, OTP, Forgot)
+         ==================================================================== -->
+    <div id="auth-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <div class="modal-dialog auth-modal-dialog">
+        <div class="modal-header">
+          <h3 id="auth-modal-title" class="modal-title">Sign In</h3>
+          <button class="modal-close-btn" data-dismiss="auth-modal" aria-label="Close dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <!-- Auth Tabs -->
+          <div id="auth-tabs" class="auth-tabs">
+            <button id="tab-btn-signin" class="auth-tab-btn active">Sign In</button>
+            <button id="tab-btn-register" class="auth-tab-btn">Create Account</button>
+          </div>
+
+          <!-- Alert Message Banner -->
+          <div id="auth-alert" class="auth-alert" role="alert">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span id="auth-alert-text"></span>
+          </div>
+
+          <!-- Screen 1: Sign In -->
+          <div id="auth-screen-signin" class="auth-screen active">
+            <form id="form-signin" novalidate>
+              <div class="form-group">
+                <label for="signin-email" class="form-label">Email Address</label>
+                <div class="form-input-box">
+                  <input type="email" id="signin-email" class="form-input" placeholder="name@domain.com" required autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="signin-password" class="form-label">
+                  <span>Password</span>
+                  <a href="#" class="forgot-password-link" data-action="show-forgot">Forgot Password?</a>
+                </label>
+                <div class="form-input-box">
+                  <input type="password" id="signin-password" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
+                  <button type="button" class="toggle-password-btn" data-target="signin-password" aria-label="Show password">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-options-row">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="signin-remember" checked />
+                  <span>Remember this browser</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary auth-submit-btn">
+                <span>Sign In</span>
+              </button>
+
+              <div class="auth-footer-prompt">
+                Don't have an account? <button type="button" data-action="open-register">Create Account</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Screen 2: Create Account -->
+          <div id="auth-screen-register" class="auth-screen">
+            <form id="form-register" novalidate>
+              <div class="form-group">
+                <label for="register-name" class="form-label">Full Name</label>
+                <input type="text" id="register-name" class="form-input" placeholder="Dr. Jane Doe" required autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="register-email" class="form-label">Email Address</label>
+                <input type="email" id="register-email" class="form-input" placeholder="jane@hospital.org" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="register-password" class="form-label">Password</label>
+                <div class="form-input-box">
+                  <input type="password" id="register-password" class="form-input" placeholder="Minimum 8 characters" required autocomplete="new-password" />
+                  <button type="button" class="toggle-password-btn" data-target="register-password" aria-label="Show password">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+                <!-- Password Strength Meter -->
+                <div class="password-strength-wrap">
+                  <div class="strength-meter-bar">
+                    <div id="password-strength-fill" class="strength-meter-fill"></div>
+                  </div>
+                  <span id="password-strength-label" class="strength-label"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="register-confirm" class="form-label">Confirm Password</label>
+                <div class="form-input-box">
+                  <input type="password" id="register-confirm" class="form-input" placeholder="Re-enter password" required autocomplete="new-password" />
+                  <button type="button" class="toggle-password-btn" data-target="register-confirm" aria-label="Show password">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-options-row">
+                <label class="checkbox-label" style="align-items: flex-start;">
+                  <input type="checkbox" id="register-terms" required style="margin-top: 3px;" />
+                  <span>I accept the <a href="#" data-action="open-terms" style="color: var(--accent-cyan); text-decoration: underline;">Terms of Use</a> and acknowledge the <a href="#" data-action="open-disclaimer" style="color: var(--accent-cyan); text-decoration: underline;">Medical Disclaimer</a>.</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary auth-submit-btn">
+                <span>Continue to OTP Verification</span>
+              </button>
+
+              <div class="auth-footer-prompt">
+                Already registered? <button type="button" data-action="open-signin">Sign In</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Screen 3: Email OTP Verification -->
+          <div id="auth-screen-otp" class="auth-screen">
+            <p class="otp-info-text">
+              We have dispatched a 6-digit verification code to <strong id="otp-target-email" style="color: var(--text-primary);"></strong>. Please enter it below to confirm your research profile.
+            </p>
+
+            <form id="form-otp">
+              <div class="otp-container">
+                <input type="text" maxlength="1" class="otp-digit-input" inputmode="numeric" pattern="[0-9]*" aria-label="Digit 1" autofocus />
+                <input type="text" maxlength="1" class="otp-digit-input" inputmode="numeric" pattern="[0-9]*" aria-label="Digit 2" />
+                <input type="text" maxlength="1" class="otp-digit-input" inputmode="numeric" pattern="[0-9]*" aria-label="Digit 3" />
+                <input type="text" maxlength="1" class="otp-digit-input" inputmode="numeric" pattern="[0-9]*" aria-label="Digit 4" />
+                <input type="text" maxlength="1" class="otp-digit-input" inputmode="numeric" pattern="[0-9]*" aria-label="Digit 5" />
+                <input type="text" maxlength="1" class="otp-digit-input" inputmode="numeric" pattern="[0-9]*" aria-label="Digit 6" />
+              </div>
+
+              <button type="submit" class="btn btn-primary auth-submit-btn">
+                <span>Verify Email Address</span>
+              </button>
+
+              <div class="otp-resend-row">
+                <span>Didn't receive code?</span>
+                <button type="button" id="otp-resend-btn" class="otp-resend-btn" disabled>
+                  Resend OTP (<span id="otp-timer-count">60s</span>)
+                </button>
+              </div>
+
+              <div class="auth-footer-prompt">
+                <button type="button" data-action="return-signin">Back to Sign In</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Screen 4: Forgot Password -->
+          <div id="auth-screen-forgot" class="auth-screen">
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 18px;">
+              Enter your registered email address and we'll dispatch password recovery instructions.
+            </p>
+
+            <form id="form-forgot" novalidate>
+              <div class="form-group">
+                <label for="forgot-email" class="form-label">Email Address</label>
+                <input type="email" id="forgot-email" class="form-input" placeholder="name@domain.com" required />
+              </div>
+
+              <button type="submit" class="btn btn-primary auth-submit-btn">
+                <span>Send Reset Link</span>
+              </button>
+
+              <div class="auth-footer-prompt">
+                Remember your password? <button type="button" data-action="return-signin">Return to Sign In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         Modal 2: Detection Entry Point Modal
+         ==================================================================== -->
+    <div id="detection-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="detection-modal-title">
+      <div class="modal-dialog modal-dialog-large">
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <div class="brand-icon-box" style="width: 28px; height: 28px;" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v20M2 12h20M7 7l10 10M17 7L7 17"></path>
+              </svg>
+            </div>
+            <h3 id="detection-modal-title" class="modal-title">FractureAI Radiograph Upload Portal</h3>
+          </div>
+          <button class="modal-close-btn" data-dismiss="detection-modal" aria-label="Close dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="model-notice-banner">
+            <strong>Architecture Notice:</strong> The Convolutional Neural Network (CNN) transfer learning model is undergoing academic validation. This interface allows testing client-side DICOM/image ingestion, resolution scaling, and contrast preprocessing.
+          </div>
+
+          <div class="detection-portal-flow" style="margin-top: 18px;">
+            <!-- Dropzone -->
+            <div id="xray-dropzone" class="dropzone-box">
+              <div class="dropzone-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <h4 style="font-size: 16px; font-weight: 600; color: #F4F8FF; margin-bottom: 6px;">
+                Drag &amp; drop your bone X-ray radiograph here
+              </h4>
+              <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 14px;">
+                Supported file formats: DICOM (.dcm), PNG, or JPEG up to 25 MB
+              </p>
+              <button type="button" class="btn btn-secondary btn-sm">Select File From Computer</button>
+              <input type="file" id="xray-file-input" accept="image/*,.dcm" style="display: none;" />
+            </div>
+
+            <!-- Preview Container -->
+            <div id="xray-preview-container" style="display: none;">
+              <div style="position: relative; max-height: 280px; overflow: hidden; border-radius: 10px; border: 1px solid rgba(57, 213, 255, 0.3); background: #000; text-align: center;">
+                <img id="xray-preview-img" src="" alt="Uploaded X-ray preview" style="max-height: 280px; width: auto; margin: 0 auto; display: block;" />
+              </div>
+              <div id="xray-analysis-status"></div>
+              <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 14px;">
+                <button type="button" id="btn-reset-upload" class="btn btn-secondary btn-sm">Upload Different Image</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div style="font-size: 12px; color: var(--text-dim); margin-right: auto; display: flex; align-items: center; gap: 6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            Research Prototype Simulation Only
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="detection-modal">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         Modal 3: Bone Health Awareness Expanded Modal
+         ==================================================================== -->
+    <div id="awareness-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="awareness-modal-title">
+      <div class="modal-dialog modal-dialog-large">
+        <div class="modal-header">
+          <h3 id="awareness-modal-title" class="modal-title">Bone Health Education &amp; Clinical Checklist</h3>
+          <button class="modal-close-btn" data-dismiss="awareness-modal" aria-label="Close dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <h4>1. First-Aid Suspected Fracture Protocol (R.I.C.E. Guidelines)</h4>
+          <p>
+            When an acute skeletal injury occurs, following safe stabilization procedures prevents secondary vascular and neural damage:
+          </p>
+          <ul style="padding-left: 20px; margin: 10px 0; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Rest:</strong> Cease movement of the injured extremity immediately. Avoid any weight-bearing activity.</li>
+            <li><strong>Immobilize:</strong> Support the limb in the position found. Do not attempt to push bones back or straighten crooked joints.</li>
+            <li><strong>Cold Compress:</strong> Apply a cloth-wrapped cold pack for 15-20 minutes at a time to mitigate soft-tissue swelling. Never apply ice directly to bare skin.</li>
+            <li><strong>Elevate:</strong> If possible without causing additional pain, elevate the limb above heart level to decrease fluid pooling.</li>
+          </ul>
+
+          <h4>2. Nutritional Foundations for Bone Density</h4>
+          <p>
+            Bones continuously remodel throughout life. Maintaining adequate structural mineral density requires consistent lifestyle inputs:
+          </p>
+          <ul style="padding-left: 20px; margin: 10px 0; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Dietary Calcium:</strong> Essential mineral building block found in dairy products, fortified plant milks, leafy greens, and almonds. Adults typically require 1,000–1,200 mg daily.</li>
+            <li><strong>Vitamin D Synthesis:</strong> Facilitates intestinal calcium absorption. Sourced through safe sun exposure, fatty fish, and supplementation where recommended by clinicians.</li>
+            <li><strong>Weight-Bearing Resistance:</strong> Walking, jogging, stair climbing, and resistance exercises trigger osteoblastic bone deposition, reinforcing cortical thickness.</li>
+          </ul>
+
+          <h4>3. Questions to Prepare for Your Orthopedic Specialist</h4>
+          <p>
+            When meeting with an orthopedic doctor after an X-ray:
+          </p>
+          <ul style="padding-left: 20px; margin: 10px 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>Is the fracture non-displaced (hairline) or displaced requiring reduction?</li>
+            <li>Does the fracture line breach the joint surface (intra-articular)?</li>
+            <li>What is the expected cast/immobilization timeline before physical therapy?</li>
+            <li>Would a DEXA bone mineral density screening be advisable?</li>
+          </ul>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="awareness-modal">Got It</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         Modal 4: Privacy Policy
+         ==================================================================== -->
+    <div id="modal-privacy" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="privacy-modal-title" class="modal-title">Privacy Policy</h3>
+          <button class="modal-close-btn" data-dismiss="modal-privacy" aria-label="Close dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>1. Research Prototype Data Handling</h4>
+          <p>FractureAI is operated as an academic educational prototype. Uploaded radiograph samples are handled strictly in transient client memory for interface demonstration unless explicitly contributed to de-identified academic research benchmarking.</p>
+          <h4>2. Personal Information</h4>
+          <p>Account registration collects user name and email solely for identity verification and multi-factor authentication purposes. We do not sell, rent, or monetize personal user records.</p>
+          <h4>3. HIPAA & Health Privacy</h4>
+          <p>Users must not upload Protected Health Information (PHI) containing patient names, social security numbers, or medical record identifiers. Always anonymize or de-identify DICOM headers before research submission.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal-privacy">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         Modal 5: Terms of Use
+         ==================================================================== -->
+    <div id="modal-terms" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="terms-modal-title" class="modal-title">Terms of Use</h3>
+          <button class="modal-close-btn" data-dismiss="modal-terms" aria-label="Close dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>1. Educational Purpose Only</h4>
+          <p>By accessing FractureAI, you acknowledge that all software algorithms, predictions, visual annotations, and informational texts are provided strictly for academic research and educational exploration.</p>
+          <h4>2. User Responsibilities</h4>
+          <p>You agree not to use the service for emergency medical triage, direct patient treatment, clinical prescription, or surgical planning without independent physician evaluation.</p>
+          <h4>3. Limitation of Liability</h4>
+          <p>FractureAI developers, academic institutions, and contributors assume no liability for medical decisions made on the basis of model representations.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal-terms">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         Modal 6: Medical Disclaimer
+         ==================================================================== -->
+    <div id="modal-disclaimer" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="disclaimer-modal-title">
+      <div class="modal-dialog">
+        <div class="modal-header">
+          <h3 id="disclaimer-modal-title" class="modal-title">Medical Disclaimer</h3>
+          <button class="modal-close-btn" data-dismiss="modal-disclaimer" aria-label="Close dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div style="background: rgba(255, 107, 107, 0.12); border: 1px solid rgba(255, 107, 107, 0.35); border-radius: 8px; padding: 14px; color: #ffb8b8; margin-bottom: 16px;">
+            <strong>MANDATORY NOTICE:</strong>
+            FractureAI is an educational AI research prototype. Its output is not a medical diagnosis and must not replace evaluation by a qualified healthcare professional.
+          </div>
+          <h4>Clinical Evaluation Required</h4>
+          <p>Radiographic assessment requires rigorous review by board-certified radiologists and orthopedic surgeons who examine multi-planar projections, patient clinical history, physical joint stability, and neurovascular status. AI algorithms can produce false positives, false negatives, or artifact misinterpretations.</p>
+          <h4>Emergency Healthcare</h4>
+          <p>If you or someone in your care has suffered an acute trauma, visibly displaced bone, open skin laceration near a joint, numbness, or loss of pulse, immediately call emergency services (such as 911) or proceed to the nearest hospital emergency department.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal-disclaimer">I Understand</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main JavaScript Application Module -->
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
